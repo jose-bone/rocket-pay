@@ -100,7 +100,7 @@ function updateSecurityCode(code) {
 }
 
 cardNumberMasked.on("accept", () => {
-  const cardType = cardNumberMasked.masked.currentMask.cardtype
+  const cardType = cardNumberMasked.masked.currentMask.cardType
   setCardType(cardType)
   updateCardNumber(cardNumberMasked.value)
 })
@@ -116,7 +116,7 @@ expirationDateMasked.on("accept", () => {
 })
 
 function updateExpirationDate(date) {
-  const ccExpiration = document.querySelector(".cc-expiration .value")
+  const ccExpiration = document.querySelector(".cc-extra .value")
 
   ccExpiration.innerText = date.length === 0 ? "02/32" : date
 }
